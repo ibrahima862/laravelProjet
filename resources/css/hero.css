@@ -1,0 +1,158 @@
+/* HERO */
+.hero {
+  padding: 3rem 2rem;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--primary), var(--primary-2));
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* centrer le contenu si besoin */
+  gap: 20px;
+  
+}
+
+.hero-grid {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-text h1 {
+  font-size: 34px;
+  margin: 0 0 8px;
+  line-height: 1.02
+}
+
+.hero-text p {
+  margin: 0 0 16px;
+  color: rgba(255, 255, 255, 0.95)
+}
+
+.hero-cta {
+  display: flex;
+  gap: 12px
+}
+
+.btn {
+  padding: 12px 28px;
+  font-size: 12px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all .25s ease;
+  font-weight: 600;
+  border: none;
+}
+
+.btn--primary {
+  background: #07008d;
+  /* Indigo moderne */
+  color: white;
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+
+.btn--primary:hover {
+  background: #4338CA;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(79, 70, 229, 0.35);
+}
+
+.btn--ghost {
+  background: #ffffff;
+  color: #272727;
+  border: 2px solid #4F46E5;
+}
+
+.btn--ghost:hover {
+  background: #4F46E5;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(79, 70, 229, 0.3);
+}
+
+
+.hero-visual {
+  position: relative;
+  width: 190px;
+  height: 190px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(2, 6, 23, 0.22);
+}
+
+#heroCarousel {
+  width: 90%;
+  height: 90%;
+  position: relative;
+  /* important */
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 14px;
+}
+
+#heroCarousel img {
+  position: absolute;
+  /* maintenant les images se superposent correctement */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* remplit tout le conteneur sans déformer */
+  opacity: 0;
+  transition: opacity 2s ease;
+  border-radius: 10px;
+}
+
+#heroCarousel img.active {
+  opacity: 1;
+}
+.progress-square {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.carousel-text {
+  position: absolute;
+  bottom: 86px;
+  left: 16px;
+  right: 10px;
+  color: #ffffffee;
+  font-weight: 500;
+  font-size: 12px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.carousel-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* PROMO strip */
+.promo-strip {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin: 18px 0
+}
+
+.pill {
+  background: linear-gradient(90deg, #0ea5e9, #7c3aed);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 800
+}
